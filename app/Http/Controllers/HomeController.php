@@ -11,6 +11,9 @@ class HomeController extends Controller
     {
         if ($request->session()->exists("user")) {
             return redirect("/dashboard");
+        } else if($request->session()->exists("warga")){
+            //redirect ke halaman dashboard warga
+            return redirect("/warga-dashboard");
         } else {
             return redirect("/login");
         }

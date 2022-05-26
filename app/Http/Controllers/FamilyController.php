@@ -39,4 +39,10 @@ class FamilyController extends Controller
         $family->delete();
         return redirect('/family');
     }
+
+    public function anggota($id){
+        $resident = DB::table('residents')->select("residents.*",'families.no_kk as no_kk', 'families.kep_keluarga as kepkap')->where('family_id',"=","$id")
+        ->join('families', "families.id",'=','residents.family_id')->orderBy('nik','asc')->get();
+        return view('family.anggota', compact(["resident"]));
+    }
 }

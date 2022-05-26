@@ -28,7 +28,11 @@
                     <input name="password" type="password" class="form-control" id="password" placeholder="password">
                     <label for="password">Password</label>
                 </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign In</button>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign In RT/RW</button>
+            </form>
+            <form action="/warga-login" class="p-4 p-md-5 border rounded-3 bg-light" method="post">
+                @csrf
+                <button class="w-100 btn btn-lg btn-primary" type="submit">MASUK SEBAGAI WARGA</button>
             </form>
         </div>
     </div>
