@@ -52,4 +52,7 @@ Route::controller(FamilyController::class)
         Route::get("/family", "show");
         Route::get("/family/add", "showAdd");
         Route::post("/family/store", "store");
+        Route::get("/family/{id}/edit","edit");
+        Route::put("/family/{id}", "update");
+        Route::delete("/family/{id}", "destroy");
 });

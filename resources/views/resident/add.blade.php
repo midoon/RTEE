@@ -1,5 +1,5 @@
 @extends('layout.master')
-
+@include('partial.navbar')
 @section('content')
 <div class="container">
         <h1>CREATE WARGA</h1>

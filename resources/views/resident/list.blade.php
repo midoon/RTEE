@@ -1,6 +1,7 @@
 @extends('layout.master')
 
 @section('content')
+@include('partial.navbar')
 <div class="container">
 
 <table class="table table-hover">
