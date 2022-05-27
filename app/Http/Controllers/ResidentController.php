@@ -19,12 +19,12 @@ class ResidentController extends Controller
         // $resident = DB::table('residents')->select("*")->get();
 
         // dd($resident);
-        return view("resident.list",compact(['resident']));
+        return view("resident.list",compact(['resident']), ["title" => "List Warga"]);
     }
 
     public function showAdd(){
         $families = DB::table('families')->select('*')->orderBy('no_kk', 'asc')->get();
-        return view("resident.add", compact(['families']));
+        return view("resident.add", compact(['families']), ["title" => "Tambah Warga"]);
     }
 
     public function store(Request $request){
@@ -37,7 +37,7 @@ class ResidentController extends Controller
         
         $resident = Resident::find($id);
         $families = DB::table('families')->select('*')->orderBy('no_kk', 'asc')->get();
-        return view("resident.edit", compact(['resident','families']));
+        return view("resident.edit", compact(['resident','families']), ["title" => "Edit Warga"]);
     }
 
     public function update($id, Request $request){

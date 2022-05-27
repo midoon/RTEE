@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class DashboardController extends Controller
 {
     public function show(){
-        return view("dashboard.index");
+        return view("dashboard.index",["title" => "RTEE | Dashboard"]);
     }
 
     public function listResident(){
