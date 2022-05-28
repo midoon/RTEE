@@ -9,9 +9,10 @@
 @include('partial.navbar')
 <div class="konten" style="margin-left: 250px">
     <div class="container">
-        <h1>EDIT WARGA</h1>
+        <h3 class="mt-3">Edit Warga</h3>
+        <hr>
 
-        <form action="/resident/{{$resident->id}}" method="post">
+        <form action="/resident/{{$resident->id}}" method="post" class="mb-5">
             @method('put')
             @csrf
             <div class="mb-3">
@@ -56,7 +57,7 @@
             </div>
 
 
-            <input type="submit" name="submit" value="save">
+            <input type="submit" name="submit" value="UPDATE" class="btn btn-success">
         </form>
 </div>
 </div>

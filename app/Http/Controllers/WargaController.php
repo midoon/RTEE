@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Family;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -33,8 +34,9 @@ class WargaController extends Controller
     }
 
     public function anggota($id){
+        $kepkap = Family::find($id)->kep_keluarga;
         $resident = DB::table('residents')->select("residents.*",'families.no_kk as no_kk', 'families.kep_keluarga as kepkap')->where('family_id',"=","$id")
         ->join('families', "families.id",'=','residents.family_id')->orderBy('nik','asc')->get();
-        return view('warga.anggota-family', compact(["resident"]), ["title" => "List Anggota KK"]);
+        return view('warga.anggota-family', compact(["resident"]), ["title" => "List Anggota KK", "kepkap" => $kepkap]);
     }
 }

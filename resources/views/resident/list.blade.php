@@ -12,6 +12,8 @@
 
 <div class="konten" style="margin-left: 260px;">
     <div class="container">
+        <h3 class="mt-3">Daftar Warga</h3>
+        <hr>
         <table class="table table-hover">
             <tr>
                 <th>NO.KK</th>
@@ -21,6 +23,7 @@
                 <th>PROFESI</th>
                 <th>ALAMAT</th>
                 <th>AKSI</th>
+                <th></th>
             </tr>
             @foreach($resident as $r)
                 <tr>
@@ -31,11 +34,14 @@
                     <td>{{$r->profesi}}</td>
                     <td>{{$r->alamat}}</td>
                     <td>
-                        <a href="/resident/{{$r->id}}/edit">Edit</a>
+                        <a href="/resident/{{$r->id}}/edit" class="text-decoration-none text-success"><h5><i class='bx bxs-edit' ></i></h5></a>
+                        
+                    </td>
+                    <td>
                         <form action="/resident/{{$r->id}}" method="post">
                             @csrf
                             @method('delete')
-                            <input type="submit" value="delete">
+                            <input type="submit" value="Hapus" class="bg-danger text-white btn">
                         </form>
                     </td>
                 </tr>

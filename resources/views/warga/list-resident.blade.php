@@ -6,8 +6,10 @@
 
 @section('content')
 @include('partial.navbar-warga')
-<div class="konten" style="margin-left: 260px">
+<div class="konten" style="margin-left: 260px; ">
     <div class="container">
+        <h3 class="mt-3">Daftar Warga</h3>
+        <hr>
 
         <table class="table table-hover">
             <tr>

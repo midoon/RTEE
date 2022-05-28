@@ -13,9 +13,10 @@
 
 <div class="konten" style="margin-left: 250px">
     <div class="container">
-        <h1>CREATE WARGA</h1>
+        <h3 class="mt-3">Tambah Warga</h3>
+        <hr>
 
-        <form action="/resident/store" method="post">
+        <form action="/resident/store" method="post" class="mb-5">
             @csrf
             <div class="mb-3">
                 <label for="form-label" class="mb-2">No KK</label>
@@ -60,7 +61,7 @@
             </div>
 
 
-            <input type="submit" name="submit" value="save">
+            <input type="submit" name="submit" value="TAMBAH" class="btn  btn-success">
         </form>
     </div>
 </div>

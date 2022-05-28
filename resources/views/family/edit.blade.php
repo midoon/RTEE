@@ -8,8 +8,9 @@
 @section('content')
 @include('partial.navbar')
 <div class="konten" style="margin-left: 260px">
-    <h1>edit family</h1>
 <div class="container">
+    <h3 class="mt-3">Edit Data Keluarga</h3>
+    <hr>
 
     <form action="/family/{{$family->id}}" method="post">
         @method('put')
@@ -22,7 +23,7 @@
             <label  class="form-label">Kepala Keluarga</label>
             <input type="text" name="kep_keluarga" class="form-control" value="{{$family->kep_keluarga}}" required>
         </div>
-        <input type="submit" name="submit" value="save">
+        <input type="submit" name="submit" value="UPDATE" class="btn btn-success"> 
     </form>
 </div>
 </div>

@@ -8,8 +8,9 @@
 @section('content')
 @include('partial.navbar')
 <div class="konten" style="margin-left: 260px">
-    <h1>add family</h1>
 <div class="container">
+    <h3 class="mt-3">Tambah Keluarga</h3>
+    <hr>
 
     <form action="/family/store" method="post">
         @csrf
@@ -21,7 +22,7 @@
             <label  class="form-label">Kepala Keluarga</label>
             <input type="text" name="kep_keluarga" class="form-control" required>
         </div>
-        <input type="submit" name="submit" value="save">
+        <input type="submit" name="submit" value="TAMBAH" class="btn btn-success">
     </form>
 </div>
 </div>

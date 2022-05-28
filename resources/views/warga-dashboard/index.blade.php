@@ -40,7 +40,7 @@
         <div class="row  text-center">
             <div class="col-md-6 ">
                 <a href="/warga/list-resident" >
-                    <div class="card" >
+                    <div class="card " >
                         <div class="card-body">
                           <div class="card-title">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
