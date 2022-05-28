@@ -1,0 +1,42 @@
+.side-bar {
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #371b58;
+}
+
+.side-bar .header {
+    padding-left: 30px;
+}
+
+.side-bar ul a {
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 15px;
+    color: white;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid black;
+    transition: all 0.3s;
+}
+
+.side-bar ul li:hover a {
+    padding-left: 30px;
+}
+
+.logout {
+    padding-left: 20px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.logout .keluar {
+    color: white;
+}
+
+//konten

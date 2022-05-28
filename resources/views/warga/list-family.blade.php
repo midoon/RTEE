@@ -1,8 +1,13 @@
 @extends('layout.master')
 
+@section('css')
+    <link rel="stylesheet" href="/css/warga/war-fam.css">
+@endsection
+
 @section('content')
 @include('partial.navbar-warga')
-<h1>list family</h1>
+<div class="konten" style="margin-left: 260px">
+    <h1>list family</h1>
 <div class="container">
 
     <table class="table table-hover">
@@ -21,5 +26,6 @@
             </tr>
         @endforeach
     </table>
-    </div>
+</div>
+</div>
 @endsection

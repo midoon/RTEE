@@ -1,8 +1,14 @@
 @extends('layout.master')
 
+@section('css')
+    <link rel="stylesheet" href="/css/family/fam-edit.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+@endsection
+
 @section('content')
 @include('partial.navbar')
-<h1>edit family</h1>
+<div class="konten" style="margin-left: 260px">
+    <h1>edit family</h1>
 <div class="container">
 
     <form action="/family/{{$family->id}}" method="post">
@@ -18,5 +24,6 @@
         </div>
         <input type="submit" name="submit" value="save">
     </form>
+</div>
 </div>
 @endsection

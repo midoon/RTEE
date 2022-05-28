@@ -1,7 +1,14 @@
 @extends('layout.master')
-@include('partial.navbar')
+@section('css')
+    <link rel="stylesheet" href="/css/resident/res-edit.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+@endsection
+
+
 @section('content')
-<div class="container">
+@include('partial.navbar')
+<div class="konten" style="margin-left: 250px">
+    <div class="container">
         <h1>EDIT WARGA</h1>
 
         <form action="/resident/{{$resident->id}}" method="post">
@@ -51,5 +58,6 @@
 
             <input type="submit" name="submit" value="save">
         </form>
-    </div>
+</div>
+</div>
 @endsection
