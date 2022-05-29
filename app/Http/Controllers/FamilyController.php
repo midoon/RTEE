@@ -10,11 +10,11 @@ class FamilyController extends Controller
 {
     public function show(){
         $family = DB::table('families')->select('*')->orderBy('no_kk', 'asc')->get();
-        return view("family.list", compact(["family"]), ["title" => "List KK"]);
+        return view("family.list", compact(["family"]), ["title" => "Daftar Keluarga"]);
     }
 
     public function showAdd(){
-        return view("family.add", ["title" => "Tambah KK"]);
+        return view("family.add", ["title" => "Tambah Data Keluarga"]);
     }
 
     public function store(Request $request){
@@ -25,7 +25,7 @@ class FamilyController extends Controller
 
     public function edit($id){
         $family = Family::find($id);
-        return view("family.edit", compact(['family']), ["title" => "Edit KK"]);
+        return view("family.edit", compact(['family']), ["title" => "Edit Data Keluarga"]);
     }
 
     public function update($id, Request $request){
@@ -44,6 +44,6 @@ class FamilyController extends Controller
         $kepkap = Family::find($id)->kep_keluarga;
         $resident = DB::table('residents')->select("residents.*",'families.no_kk as no_kk', 'families.kep_keluarga as kepkap')->where('family_id',"=","$id")
         ->join('families', "families.id",'=','residents.family_id')->orderBy('nik','asc')->get();
-        return view('family.anggota', compact(["resident"]), ["title" => "List Anggota KK", "kepkap" => $kepkap]);
+        return view('family.anggota', compact(["resident"]), ["title" => "Daftar Anggota Keluarga", "kepkap" => $kepkap]);
     }
 }

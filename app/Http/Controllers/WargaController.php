@@ -25,18 +25,18 @@ class WargaController extends Controller
     //data
     public function listResident(){
         $resident = DB::table('residents')->select("residents.*",'families.no_kk as no_kk', 'families.kep_keluarga as kepkap')->join('families', "families.id",'=','residents.family_id')->orderBy('nik','asc')->get();
-        return view("warga.list-resident",compact(['resident']), ["title" => "List Warga"]);
+        return view("warga.list-resident",compact(['resident']), ["title" => "Daftar Warga"]);
     }
 
     public function listFamily(){
         $family = DB::table('families')->select('*')->orderBy('no_kk', 'asc')->get();
-        return view('warga.list-family', compact(['family']), ["title" => "List KK"]);
+        return view('warga.list-family', compact(['family']), ["title" => "Daftar Keluarga"]);
     }
 
     public function anggota($id){
         $kepkap = Family::find($id)->kep_keluarga;
         $resident = DB::table('residents')->select("residents.*",'families.no_kk as no_kk', 'families.kep_keluarga as kepkap')->where('family_id',"=","$id")
         ->join('families', "families.id",'=','residents.family_id')->orderBy('nik','asc')->get();
-        return view('warga.anggota-family', compact(["resident"]), ["title" => "List Anggota KK", "kepkap" => $kepkap]);
+        return view('warga.anggota-family', compact(["resident"]), ["title" => "Daftar Anggota Keluarga", "kepkap" => $kepkap]);
     }
 }
