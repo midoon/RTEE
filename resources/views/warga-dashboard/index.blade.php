@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light ">
     <div class="container">
       <a class="navbar-brand logo " href="/dashboard"><img src="img/rtee_logo.png" alt="" width="50px"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,10 +35,10 @@
 </section>
 
 {{-- fitur --}}
-<section class="fitur p-5">
+<section class="fitur " style="padding-bottom: 100px">
     <div class="container">
         <div class="row  text-center">
-            <div class="col-md-6 ">
+            <div class="col-md-6 mb-5">
                 <a href="/warga/list-resident" >
                     <div class="card " >
                         <div class="card-body">
@@ -53,7 +53,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mb-5">
                 <a href="/warga/list-family">
                     <div class="card" >
                         <div class="card-body">

@@ -12,7 +12,7 @@
         <hr>
 
         <table class="table table-hover">
-            <tr>
+            <tr class="text-center">
                 <th>NO.KK</th>
                 <th>NIK</th>
                 <th>NAMA</th>
@@ -22,7 +22,7 @@
                 
             </tr>
             @foreach($resident as $r)
-                <tr>
+                <tr class="text-center">
                     <td>{{$r->no_kk}}</td>
                     <td>{{$r->nik}}</td>
                     <td>{{$r->nama}}{{($r->kepkap==$r->nama)?  "*" :  ""}}</td>

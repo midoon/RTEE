@@ -13,15 +13,15 @@
     <h3 class="mt-3">Daftar Keluarga</h3>
     <hr>
     <table class="table table-hover">
-        <tr>
+        <tr class="text-center">
             <th>NO.KK</th>
             <th>KEPALA KELUARGA</th>
             <th>AKSI</th>
             <th></th>
-            <th>DETAIL</th>
+            <th>DETAIL ANGGOTA</th>
         </tr>
         @foreach($family as $f)
-            <tr>
+            <tr class="text-center">
                 <td>{{$f->no_kk}}</td>
                 <td>{{$f->kep_keluarga}}</td>
                 <td>
@@ -36,7 +36,7 @@
                     </form>
                 </td>
                 <td>
-                    <a href="/family/{{$f->id}}/anggota" class="text-decoration-none text-dark">Anggota <i class='bx bxs-user-detail mt-2' style="font-size: 20px"></i></a>
+                    <a href="/family/{{$f->id}}/anggota" class="text-decoration-none text-white btn btn-success"><i class='bx bxs-user-detail mt-2' style="font-size: 20px"></i></a>
                 </td>
             </tr>
         @endforeach

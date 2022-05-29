@@ -13,17 +13,17 @@
     <hr>
 
     <table class="table table-hover">
-        <tr>
+        <tr class="text-center">
             <th>NO.KK</th>
             <th>KEPALA KELUARGA</th>
             <th>ANGGOTA KK</th>
         </tr>
         @foreach($family as $f)
-            <tr>
+            <tr class="text-center">
                 <td>{{$f->no_kk}}</td>
                 <td>{{$f->kep_keluarga}}</td>
                 <td>
-                    <a href="/warga/family/{{$f->id}}/anggota" class="text-decoration-none text-dark">Anggota <i class='bx bxs-user-detail'></i></a>
+                    <a href="/warga/family/{{$f->id}}/anggota" class="text-decoration-none text-white btn btn-success"><i class='bx bxs-user-detail'></i></a>
                 </td>
             </tr>
         @endforeach
